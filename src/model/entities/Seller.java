@@ -1,0 +1,82 @@
+package entities;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Objects;
+
+
+public class Seller implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    private Integer id;
+    private String name;
+    private String email;
+    private Date birthDate;
+    private Double baseSalary;
+
+    private Departament departament;
+
+    public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Departament departament) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.birthDate = birthDate;
+        this.baseSalary = baseSalary;
+        this.departament = departament;
+    }
+
+    public Departament getDepartament() {
+        return departament;
+    }
+
+    public void setDepartament(Departament departament) {
+        this.departament = departament;
+    }
+
+    public Double getBaseSalary() {
+        return baseSalary;
+    }
+
+    public void setBaseSalary(Double baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Seller seller = (Seller) o;
+        return Objects.equals(getId(), seller.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getId());
+    }
+
+    @Override
+    public String toString() {
+        return "Seller datas: \n" +
+                "id: " + id + "\n" +
+                "name: " + name + "\n" +
+                "email: " + email + "\n" +
+                "birthDate: " + birthDate + "\n" +
+                "baseSalary: " + baseSalary + "\n" +
+                "departament: \n" + departament;
+    }
+}
