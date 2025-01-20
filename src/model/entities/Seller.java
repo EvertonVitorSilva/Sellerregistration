@@ -1,4 +1,4 @@
-package entities;
+package model.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,6 +15,9 @@ public class Seller implements Serializable {
     private Double baseSalary;
 
     private Departament departament;
+
+    public Seller(){
+    }
 
     public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Departament departament) {
         this.id = id;
@@ -55,6 +58,22 @@ public class Seller implements Serializable {
 
     public Date getBirthDate() {
         return birthDate;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     @Override

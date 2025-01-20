@@ -1,4 +1,4 @@
-package entities;
+package model.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -8,6 +8,9 @@ public class Departament implements Serializable {
     private static final long serialVersionUID = 1L;
     private Integer id;
     private String name;
+
+    public Departament(){
+    }
 
     public Departament(Integer id, String name) {
         this.id = id;
@@ -21,6 +24,14 @@ public class Departament implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
