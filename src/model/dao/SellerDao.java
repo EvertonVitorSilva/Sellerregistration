@@ -9,7 +9,7 @@ public interface SellerDao {
 
     public void insert(Seller obj);
     public void update(Seller obj);
-    public void deletById(Seller id);
+    public void deletById(int id);
     public Seller findById(int id);
     public List<Seller> findAll();
     List<Seller> findByDepartament(Departament departament);

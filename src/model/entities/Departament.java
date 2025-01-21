@@ -46,12 +46,10 @@ public class Departament implements Serializable {
         return Objects.hashCode(getId());
     }
 
+
+
     @Override
     public String toString() {
-        return "Departament data:\n" +
-                "id: " + id + "\n" +
-                "name: " + name;
+        return "Departament id:" + id + ", name: " + name;
     }
-
-
 }
